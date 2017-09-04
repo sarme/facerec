@@ -12,7 +12,7 @@ if 'IMREAD_GRAYSCALE' not in dir(cv2):
 PROFILES = {
     'HAAR_FRONTALFACE_ALT2': '/usr/share/opencv/haarcascades/haarcascade_frontalface_alt2.xml'
 }
-CV2_FLAGS = cv2.cv.CV_HAAR_DO_CANNY_PRUNING | cv2.cv.CV_HAAR_FIND_BIGGEST_OBJECT
+CV2_FLAGS = 1 | 4
 THRESHOLD = {'min': 4, 'max': 100}
 subjects_directory = None
 
@@ -111,7 +111,7 @@ def identify(args):
     if not len(labels):
         fatal("Unable to identify with empty storage. Enroll few subjects first.")
 
-    recognizer = cv2.createLBPHFaceRecognizer()
+    recognizer = cv2.face.LBPHFaceRecognizer_create()
     recognizer.train(images, np.array(labels))
 
     predict_faces = []
