@@ -31,7 +31,7 @@ or **pip**:
 
 ## Installation
 
-    $ curl https://raw.githubusercontent.com/shhavel/facerec/master/facerec>/usr/local/bin/facerec;chmod +x /usr/local/bin/facerec
+    $ curl https://raw.githubusercontent.com/sarme/facerec/master/facerec>/usr/local/bin/facerec;chmod +x /usr/local/bin/facerec
 
 Change path to `haarcascade_frontalface_alt2.xml` if needed, e.g. in OS X:
 
